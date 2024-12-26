@@ -1,12 +1,13 @@
 ## 准备工作
 1. 安装 Git
-   - 访问 https://git-scm.com/ 并下载安装。
+```
+yum install -y git
+```
 
 2. 安装 npm
-打开终端（命令提示符或 PowerShell），运行：
- ```
- yum install npm
- ```
+```
+yum install -y npm
+```
 
 3. 安装 pnpm
 ```
@@ -24,7 +25,7 @@ yum install -y chromium
 使用以下命令克隆 markmap 仓库：
 
 ```angular2html
-git clone https://github.com/markmap/markmap.git
+git clone https://github.com/wxaiway/markmap.git 
 ```
 
 进入项目目录：
@@ -34,17 +35,6 @@ cd markmap
 
 ## 第2步：安装依赖
 使用以下命令安装依赖：
-
-方式一
-```angular2html
-# 设置 npm 镜像
-npm config set registry https://registry.npmmirror.com
-
-# 安装 npm 依赖
-npm install
-```
-
-方式二（推荐）
 ```angular2html
 pnpm install
 ```
@@ -101,6 +91,7 @@ console.log('hello, JavaScript')
 | Banana | 2 |
 
 ```
+
 运行以下命令生成 HTML 格式的思维导图：
 ```angular2html
 node packages/markmap-cli/bin/cli.js test.md -o output.html --no-open --no-toolbar --offline
